@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargar película</title>
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/cb92ffd13d.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Ms+Madi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Ms+Madi&display=swap" rel="stylesheet">
+
+  <!-- estilo css -->
+  <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+  <div class="container-fluid m-0 p-0" id="inicio">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="home">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="peliteca.html">Peliteca</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="listas.html" id="linkListas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Listas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="listas.html#sectionVistas">Vistas</a></li>
+                <li><a class="dropdown-item" href="listas.html#sectionWatchlist">Watchlist</a></li>
+                <li><a class="dropdown-item" href="listas.html#sectionFavoritas">Favoritas</a></li>
+                <li><a class="dropdown-item" href="listas.html#sectionRecomendadas">Recomendadas</a></li>
+                <li><a class="dropdown-item" href="listas.html#sectionNovedades">Novedades</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" id="masVerde" href="peliculaNueva.html">Agregar película <b id="masEspacio">+</b></a>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="buscar película" id="inputBuscarPeli" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" id="btnBuscarPeli">lupita</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div id="divPeliculaBuscada">
+
+    </div>
+
+    <!-- main -->
+    <main>
+      <h2 class="mainH2">
+        Cargar película a mi Peliteca
+      </h2>
+
+      <div class="m-3 text-center" id="formAgregar">        
+        <form class="col-lg-8 m-auto row justify-content-center align-items-center" id="formFormulario">
+          <div class="form-group col-lg-6 cocontainer m-1 p-0">
+            <label for="titulo"></label>
+            <input type="text" class="form-control m-0 p-0" id="titulo" placeholder="Título">
+          </div>
+          <div class="col-lg-6 container m-1 p-0">
+            <label for="director"></label>
+            <input type="text" class="form-control m-0 p-0" id="director" placeholder="Director/a">
+          </div>
+          <div class="col-lg-6 container m-1 p-0">
+            <label for="año"></label>
+            <input type="text" class="form-control m-0 p-0" id="año" placeholder="Año">
+          </div>
+          <div class="col-lg-6 container m-1 p-0">
+            <label for="genero"></label>
+            <input type="text" class="form-control m-0 p-0" id="genero" placeholder="Género">
+          </div>
+          <div class="col-lg-6 container m-1 p-0">
+            <label for="duracion"></label>
+            <input type="text" class="form-control m-0 p-0" id="duracion" placeholder="Duración">
+          </div>
+
+          <div class="divPregunta" id="divVistas">
+            <p class="pCheckbox"> ¿viste esta película?</p>
+            <div class="form-check">
+              <input class="form-check-input btn-outline-success" type="checkbox" value="si" id="siVistas">
+              <label class="form-check-label" for="siVistas">sí</label>
+            </div>
+          </div>
+
+          <div class="divPregunta">
+            <p class="pCheckbox"> ¿querés agregar esta película a tu lista watchlist?</p>
+            <div class="form-check">
+              <input class="form-check-input btn-outline-success" type="checkbox" value="si" id="siWatchlist">
+              <label class="form-check-label" for="siWatchlist">sí</label>
+            </div>
+          </div>
+
+          <div class="divPregunta">
+            <p class="pCheckbox"> ¿querés agregar esta película a tu lista favoritas?</p>
+            <div class="form-check">
+              <input class="form-check-input btn-outline-success" type="checkbox" value="si" id="siFavoritas">
+              <label class="form-check-label" for="siFavoritas">sí</label>
+            </div>
+          </div>
+          
+          <div class="divPregunta">
+            <p class="pCheckbox"> ¿querés agregar esta película a tu lista recomendadas?</p>
+            <div class="form-check">
+              <input class="form-check-input btn-outline-success" type="checkbox" value="si" id="siRecomendadas">
+              <label class="form-check-label" for="siRecomendadas">sí</label>
+            </div>
+          </div>
+
+          <div class="container">
+            <button type="submit" id="agregar" class="btn btn-outline-success">Agregar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="../js/classPelicula.js"></script>
+    <script src="../js/contenidoPeliteca.js"></script>
+    <script src="../js/nuevaPelicula.js"></script>
+    <script src="../js/js.js"></script>
+  </div>
+</body>
+</html>

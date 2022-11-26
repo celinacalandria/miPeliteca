@@ -1,0 +1,249 @@
+*{
+    background-color: #313D5A;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* navbar */
+.nav-link{
+    font-size: 1.3rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+.dropdown-menu{
+    background-color: #313D5A;
+}
+.dropdown-item{
+    color: white;
+    font-size: 1.2rem;
+}
+.form-control{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1.5rem;
+}
+.btn{
+    text-align: center;
+    margin: 1.5rem;
+    font-size: 1rem;
+}
+#masVerde{
+    color: #198754;
+    transition: all 0.3s;
+}
+#masVerde:hover{
+    color: white;
+    letter-spacing: 0.05rem;
+    transition: all 0.3s;
+}
+#masEspacio{
+    margin-left: 0.4rem;
+}
+
+/* main */
+.mainH1{
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin: 1rem;
+    color: #73628A;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.mainH2{
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin: 1rem;
+    color: #60935D;
+    font-weight: 500;
+}
+
+/* sections */
+.h3{
+    color: #60935D;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 0;
+    margin: 2rem;
+}
+.h4{
+    color: #60935D;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    padding: 0rem;
+    margin: 2rem;
+}
+.h42{
+    color: #60935D;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    text-align: right;
+    padding: 0rem;
+    margin: 2rem;
+}
+.h43{
+    color: #60935D;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 0rem;
+    margin: 2rem;
+}
+.sectionNovedades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.divSection{
+    border: solid 1px #60935D;
+}
+.as{
+    color: #198754;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #198754;
+    width: 60%;
+    transition: all 0.3s;
+}
+.as:hover{
+    color: white;
+    letter-spacing: 0.05rem;
+    background-color: #198754;
+    transition: all 0.3s;
+}
+
+/* form */
+#puntoInput{
+    margin: 1rem;
+    padding: 0;
+    width: 40%;
+}
+#puntoBtn{
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #198754;
+}
+#cuantasEstrellas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.divPregunta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divCheckbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+.pCheckbox{
+    font-size: 1.4rem;
+    color: white;
+    margin: 1rem;
+}
+.form-check{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.form-check-input{
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 1rem;
+    background-color: #313D5A;
+}
+.form-check-label{
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 1rem;
+    color: white;
+}
+
+
+/* peliteca */
+#divPeliteca{
+    text-align: left;
+    color: #4E8098;
+    font-size: 1.5rem;
+    margin: 4rem 12rem 4rem 6rem;
+}
+    
+/* listas */
+#divListaVistas{
+    text-align: left;
+    color: #4E8098;
+    font-size: 1.5rem;
+    margin: 4rem 12rem 4rem 6rem;
+}
+#divListaWatchlist{
+    text-align: right;
+    color: #4E8098;
+    font-size: 1.5rem;
+    margin: 4rem 12rem 4rem 6rem;
+}
+#divListaFavoritas{
+    text-align: left;
+    color: #4E8098;
+    font-size: 1.5rem;
+    margin: 4rem 12rem 4rem 6rem;
+}
+#divListaRecomendadas{
+    text-align: right;
+    color: #4E8098;
+    font-size: 1.5rem;
+    margin: 4rem 12rem 4rem 6rem;
+}
+.pItemPelicula{
+    padding: 1rem;
+}
+#divListaNovedades{
+    text-align: center;
+    color: #4E8098;
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+
+/* buscar */
+#divPeliculaBuscada{
+    margin: 0 1.5rem;
+
+}
+.pPeliculas{
+    font-size: 1.5rem;
+    color: #4E8098;
+    text-align: right;
+    margin: 1rem;
+}
+#btnReset{
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #198754;
+    text-align: right;
+    margin: 1rem;
+}
+#divBtnReset{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Listas</title>
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/cb92ffd13d.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Ms+Madi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Ms+Madi&display=swap" rel="stylesheet">
+
+  <!-- estilo css -->
+  <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+  <div class="container-fluid m-0 p-0" id="inicio">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="home">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="peliteca.html">Peliteca</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="listas.html" id="linkListas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Listas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="listas.html#sectionVistas">Vistas</a></li>
+                <li><a class="dropdown-item" href="listas.html#sectionWatchlist">Watchlist</a></li>
+                <li><a class="dropdown-item" href="listas.html#sectionFavoritas">Favoritas</a></li>
+                <li><a class="dropdown-item" href="listas.html#sectionRecomendadas">Recomendadas</a></li>
+                <li><a class="dropdown-item" href="listas.html#sectionNovedades">Novedades</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" id="masVerde" href="peliculaNueva.html">Agregar película <b id="masEspacio">+</b></a>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="buscar película" aria-label="Search" id="inputBuscarPeli">
+            <button class="btn btn-outline-success" type="submit" id="btnBuscarPeli">lupita</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div id="divPeliculaBuscada">
+
+    </div>
+
+    <main>
+      <h2 class="mainH2">
+        Listas
+      </h2>
+
+      <div id="divListas">
+        <section id="sectionVistas">
+          <div id="divListaVistas">
+            <h4 class="h4">
+              Vistas:
+            </h4 >
+  
+          </div>
+        </section>
+  
+        <section id="sectionWatchlist">
+          <div id="divListaWatchlist">
+            <h4 class="h42">
+              Watchlist:
+            </h4 >
+  
+          </div>
+        </section>
+  
+        <section id="sectionFavoritas">
+          <div id="divListaFavoritas">
+            <h4 class="h4">
+              Favoritas:
+            </h4>
+  
+          </div>
+        </section>
+  
+        <section id="sectionRecomendadas">
+          <div id="divListaRecomendadas">
+            <h4 class="h42">
+              Recomendadas:
+            </h4>
+  
+          </div>
+        </section>
+
+        <section id="sectionNovedades">
+          <div id="divListaNovedades">
+            <h4 class="h43">
+              Novedades:
+            </h4 >
+  
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="../js/classPelicula.js"></script>
+    <script src="../js/contenidoPeliteca.js"></script>
+    <script src="../js/mostrarListas.js"></script>
+    <script src="../js/mostrarNovedades.js"></script>
+    <script src="../js/js.js"></script>
+  </div>
+</body>
+</html>
