@@ -1,9 +1,12 @@
-*{
+.body{
     background-color: #313D5A;
     font-family: 'Manrope', sans-serif;
 }
 
 /* navbar */
+.navbar{
+    background-color: #313D5A;
+}
 .nav-link{
     font-size: 1.3rem;
     margin: 1.5rem;
@@ -44,7 +47,7 @@
     font-size: 4rem;
     letter-spacing: 0.3rem;
     text-align: center;
-    margin: 1rem;
+    margin: 1rem 0 2.5rem 0;
     color: #73628A;
     text-transform: uppercase;
     font-weight: 700;
@@ -132,6 +135,7 @@
     border-radius: 0.25rem;
     padding: 0.375rem 0.75rem;
     border: 1px solid #198754;
+    background-color: #313D5A;
 }
 #cuantasEstrellas{
     display: flex;
@@ -221,7 +225,26 @@
     color: #4E8098;
     font-size: 1.5rem;
     margin: 2rem;
+    border-radius: 0.25rem;
+    border: 1px solid #198754;
+    width: 60%;
+    transition: all 0.3s;
 }
+#divListaNovedades:hover{
+    color: white;
+    letter-spacing: 0.05rem;
+    background-color: #198754;
+    transition: all 0.3s;
+}
+#h3Novedades{
+    color: #198754;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    padding: 0;
+    margin: 2rem;
+}
+
 
 /* buscar */
 #divPeliculaBuscada{
@@ -240,6 +263,7 @@
     border: 1px solid #198754;
     text-align: right;
     margin: 1rem;
+    background-color: #313D5A;
 }
 #divBtnReset{
     display: flex;

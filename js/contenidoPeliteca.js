@@ -1,60 +1,72 @@
 /* contenido peliteca */
 
-// LISTAS VACIAS -arrays
-/* let miPeliteca = JSON.parse(localStorage.getItem("miPeliteca"));
+// PELITECA
+let miPeliteca = JSON.parse(localStorage.getItem("miPeliteca"));
 if (miPeliteca == undefined){
     miPeliteca = [];
+
+    miPeliteca.push(new Pelicula("PARASITE", "BONG JOON-HO", 2019, "COMEDY/DRAMA", 133, true, false, false, true, 5));
+    miPeliteca.push(new Pelicula("THE LIGHTHOUSE", "ROBERT EGGERS", 2019, "THRILLER/FANSTASY", 108, true, false, false, false, 4));
+    miPeliteca.push(new Pelicula("MID90S","JONAH HILL", 2018,"DRAMA/COMEDY", 86, true, false, false, false, 3));
+    miPeliteca.push(new Pelicula("CLIMAX", "GASPAR NOÉ", 2018, "MUSIC/HORROR",  97, true, false, false, false, 4));
+    miPeliteca.push(new Pelicula("LIFE","DANIEL ESPINOSA", 2017, "MISTERY/SCIENCE-FICTION", 104, true, false, false, true, 4));
+
+    miPeliteca.push(new Pelicula("CARLITOS' WAY", "BRIAN DE PALMA", 1993, "THRILLER/DRAMA", 144, false, true, false, false));
+    miPeliteca.push(new Pelicula("BLOW OUT", "BRIAN DE PALMA", 1981, "DRAMA/THRILLER", 108, false, true, false, false));
+    miPeliteca.push(new Pelicula("THE PIANIST", "ROMAN POLANSKI", 2002,"WAR/DRAMA", 150, false, true, false, false));
+    miPeliteca.push(new Pelicula("ANOTHER ROUND", "THOMAS VINTERBERG", 2020,  "COMEDY/DRAMA", 117, false, true, false, false));
+    miPeliteca.push(new Pelicula("KIKA", "PEDRO ALMODÓVAR", 1993,"COMEDY/DRAMA", 117, false, true, false, false));
+
+    miPeliteca.push(new Pelicula("10 THINGS I HATE ABOUT YOU", "GIL JUNGER", 1999,"COMEDY/ROMANCE", 97, true, false, true, false, 5));
+    miPeliteca.push(new Pelicula("MEGAMIND", "TOM MCGRATH", 2010,"COMEDY/ANIMATION", 96, true, false, true, false, 5));
+    miPeliteca.push(new Pelicula("THE SHINING", "STANLEY KUBRICK", 1980,"HORROR/THRILLER", 144, true, false, true, true, 5));
+
+    miPeliteca.push(new Pelicula("APOCALYPTO", "MEL GIBSON", 2006, "ACTION/HISTORY", 139, true, false, false, true, 5));
+    miPeliteca.push(new Pelicula("THE SECRET IN THEIR EYES", "JUAN JOSE CAMPANELLA", 2009, "CRIME/MISTERY", 130, true, false, false, true, 5));
+    miPeliteca.push(new Pelicula("ADAPTATION", "SPIKE JONZE", 2002, "CRIME/DRAMA", 115, true, false, false, true, 4));
+    miPeliteca.push(new Pelicula("BUT I'M A CHEERLEADER", "JAMIE BABBIT",1999, "COMEDY/ROMANCE", 85, true, false, false, true, 4));
+    miPeliteca.push(new Pelicula("THE INTRUDER", "NATALIA META", 2020, "THRILLER", 95, true, false, true, true, 5));
+
+    localStorage.setItem("miPeliteca", JSON.stringify(miPeliteca));
+} 
+
+// NOVEDADES
+let novedades = [];
+
+novedades.push(new Pelicula("NOPE", "JORDAN PEELE", 2022, "THRILLER", 130));
+novedades.push(new Pelicula("SMILE", "PARKER FILM", 2022, "HORROR/MISTERY", 115));
+novedades.push(new Pelicula("THE FRENCH DISPATCH", "WES ANDERSON", 2021, "DRAMA/ROMANCE", 108));
+novedades.push(new Pelicula("CRIMES OF THE FUTURE", "DAVID CRONENBERG", 2022,"SCIENCE FICTION/HORROR", 107));
+novedades.push(new Pelicula("THE WORST PERSON IN THE WORLD", "JOACHIM TRIER", 2021, "COMEDY/DRAMA", 128));
+
+ 
+// RECOMENDADAS
+/* let miListaRecomendadas = JSON.parse(localStorage.getItem("miListaRecomendadas"));
+if(miListaRecomendadas == undefined){
+    miListaRecomendadas = [];
+
+    miPeliteca.push(new Pelicula("APOCALYPTO", "MEL GIBSON", 2006, "ACTION/HISTORY", 139, true, false, false, true, 5));
+    miPeliteca.push(new Pelicula("THE SECRET IN THEIR EYES", "JUAN JOSE CAMPANELLA", 2009, "CRIME/MISTERY", 130, true, false, false, true, 5));
+    miPeliteca.push(new Pelicula("ADAPTATION", "SPIKE JONZE", 2002, "CRIME/DRAMA", 115, true, false, false, true, 4));
+    miPeliteca.push(new Pelicula("BUT I'M A CHEERLEADER", "JAMIE BABBIT",1999, "COMEDY/ROMANCE", 85, true, false, false, true, 4));
+    miPeliteca.push(new Pelicula("THE INTRUDER", "NATALIA META", 2020, "THRILLER", 95, true, false, true, true, 5));
+
+    localStorage.setItem("miListaRecomendadas", JSON.stringify(miListaRecomendadas));
 } */
 
-let miPeliteca = [];
+/* let miListaRecomendadas = [];
 
-let miListaVistas = [
-    {titulo: "PARASITE", director: "BONG JOON-HO", año: 2019, genero: "COMEDY/DRAMA", duracion: 133, vistas: true, puntaje: 4},
-    {titulo: "THE LIGHTHOUSE", director: "ROBERT EGGERS", año: 2019, genero: "THRILLER/FANSTASY", duracion: 108, vistas: true, puntaje: 4},
-    {titulo: "MID90S", director: "JONAH HILL", año: 2018, genero: "DRAMA/COMEDY", duracion: 86, vistas: true, puntaje: 3},
-    {titulo: "CLIMAX", director: "GASPAR NOÉ", año: 2018, genero: "MUSIC/HORROR", duracion: 97, vistas: true, puntaje: 4},
-    {titulo: "LIFE", director: "DANIEL ESPINOSA", año: 2017, genero: "MISTERY/SCIENCE-FICTION", duracion: 104, vistas: true, puntaje: 4},
-];
-let miListaWatchlist = [
-    {titulo: "CARLITOS' WAY", director: "BRIAN DE PALMA", año: 1993, genero: "THRILLER/DRAMA", duracion: 144, watchlist: true},
-    {titulo: "BLOW OUT", director: "BRIAN DE PALMA", año: 1981, genero: "DRAMA/THRILLER", duracion: 108, watchlist: true},
-    {titulo: "THE PIANIST", director: "ROMAN POLANSKI", año: 2002, genero: "WAR/DRAMA", duracion: 150, watchlist: true},
-    {titulo: "ANOTHER ROUND", director: "THOMAS VINTERBERG", año: 2020, genero: "COMEDY/DRAMA", duracion: 117, watchlist: true},
-    {titulo: "KIKA", director: "PEDRO ALMODÓVAR", año: 1993, genero: "COMEDY/DRAMA", duracion: 117, watchlist: true},
-];
-let miListaFavoritas = [
-    {titulo: "10 THINGS I HATE ABOUT YOU", director: "GIL JUNGER", año: 1999, genero: "COMEDY/ROMANCE", duracion: 97, vistas: true, puntaje: 5},
-    {titulo: "MEGAMIND", director: "TOM MCGRATH", año: 2010, genero: "COMEDY/ANIMATION", duracion: 96, vistas: true, favoritas: true, puntaje: 5},
-    {titulo: "THE SHINING", director: "STANLEY KUBRICK", año: 1980, genero: "HORROR/THRILLER", duracion: 144, vistas: true, favoritas: true, puntaje: 5},
-];
-let miListaRecomendadas = [
-    {titulo: "APOCALYPTO", director: "MEL GIBSON", año: 2006, genero: "ACTION/HISTORY", duracion: 139, vistas: true, puntaje: 5},
-    {titulo: "THE SECRET IN THEIR EYES", director: "JUAN JOSE CAMPANELLA", año: 2009, genero: "CRIME/MISTERY", duracion: 130, vistas: true, puntaje: 5},
-    {titulo: "ADAPTATION", director: "SPIKE JONZE", año: 2002, genero: "CRIME/DRAMA", duracion: 115, vistas: true, puntaje: 4},
-    {titulo: "BUT I'M A CHEERLEADER", director: "JAMIE BABBIT", año: 1999, genero: "COMEDY/ROMANCE", duracion: 85, vistas: true, puntaje: 4},
-    {titulo: "THE INTRUDER", director: "NATALIA META", año: 2020, genero: "THRILLER", duracion: 95, vistas: true, favoritas: true, puntaje: 5},
-];
+miListaRecomendadas.push(new Pelicula("APOCALYPTO", "MEL GIBSON", 2006, "ACTION/HISTORY", 139, true, false, false, 5));
+miListaRecomendadas.push(new Pelicula("THE SECRET IN THEIR EYES", "JUAN JOSE CAMPANELLA", 2009, "CRIME/MISTERY", 130, true, false, false, 5));
+miListaRecomendadas.push(new Pelicula("ADAPTATION", "SPIKE JONZE", 2002, "CRIME/DRAMA", 115, true, false, false, 4));
+miListaRecomendadas.push(new Pelicula("BUT I'M A CHEERLEADER", "JAMIE BABBIT",1999, "COMEDY/ROMANCE", 85, true, false, false, 4));
+miListaRecomendadas.push(new Pelicula("THE INTRUDER", "NATALIA META", 2020, "THRILLER", 95, true, false, true, 5));
 
-// LISTAS PRECARGADAS -arrays
-let novedades = [
-    {titulo: "NOPE", director: "JORDAN PEELE", año: 2022, genero: "THRILLER", duracion: 130},
-    {titulo: "SMILE", director: "PARKER FILM", año: 2022, genero: "HORROR/MISTERY", duracion: 115},
-    {titulo: "THE FRENCH DISPATCH", director: "WES ANDERSON", año: 2021, genero: "DRAMA/ROMANCE", duracion: 108},
-    {titulo: "CRIMES OF THE FUTURE", director: "DAVID CRONENBERG", año: 2022, genero: "SCIENCE FICTION/HORROR", duracion: 107},
-    {titulo: "THE WORST PERSON IN THE WORLD", director: "JOACHIM TRIER", año: 2021, genero: "COMEDY/DRAMA", duracion: 128},
-];
-let peliculasClasicas = [
-    {titulo: "ONCE UPON A TIME... IN HOLLYWOOD", director: "QUENTIN TARANTINO", año: 162, genero: "THRILLER/COMEDY", duracion: 162},
-    {titulo: "LOST IN TRANSLATION", director: "SOFIA COPPOLA", año: 2003, genero: "COMEDY/ROMANCE", duracion: 102},
-    {titulo: "IN THE MOOD FOR LOVE", director: "WONG KAR-WAI", año: 2000, genero: "DRAMA/ROMANCE", duracion: 99}
-];
+localStorage.setItem("miListaRecomendadas", JSON.stringify(miListaRecomendadas)); */
 
-miPeliteca.push(miListaVistas);
-miPeliteca.push(miListaWatchlist);
-miPeliteca.push(miListaFavoritas);
-miPeliteca.push(miListaRecomendadas);
 
-localStorage.setItem("miPeliteca", JSON.stringify(miPeliteca));
+
+
 
 
 

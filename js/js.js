@@ -14,10 +14,16 @@ buscarBtn.onclick = (e) => {
     let esta = miPelitecaGuardada.find((pelicula) => pelicula.titulo == buscada);
 
     if (buscada == ""){
-        alert("ingresa el título de la película");
+        Swal.fire({
+            icon: 'question',
+            title: 'Ingresa el título de la película',
+        })
     }
     else if (esta) {
-        alert("pelicula cargada");
+        Swal.fire({
+            icon: 'success',
+            title: 'Película encontrada',
+        })
         console.log(esta);
 
         let fragmento = document.createDocumentFragment();
@@ -60,7 +66,10 @@ buscarBtn.onclick = (e) => {
         }
     }
     else{
-        alert("la pelicula no esta cargada");
+        Swal.fire({
+            icon: 'error',
+            title: 'La película no está cargada',
+        })
         buscarInput.value = "";
     }
 }

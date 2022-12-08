@@ -3,7 +3,7 @@
 // CLASS PELICULA 
 class Pelicula {
 
-   constructor (titulo, director, año, genero, duracion, vistas, watchlist, favoritas, puntaje){
+   constructor (titulo, director, año, genero, duracion, vistas, watchlist, favoritas, recomendadas, puntaje){
       this.titulo = titulo;
       this.director = director;
       this.año = año;
@@ -12,11 +12,12 @@ class Pelicula {
       this.vistas = vistas;
       this.watchlist = watchlist;
       this.favoritas = favoritas;
+      this.recomendadas = recomendadas;
       this.puntaje = puntaje;
    }
 
    agregarComoVista(){
-     this.puntuar();
+      this.puntuar();
  
       return this.vistas = true;      
    }
@@ -76,7 +77,10 @@ class Pelicula {
             return this.puntaje = 5;
          }
          else{
-            alert("La opción ingresada no es correcta");
+            Swal.fire({
+               icon: 'warning',
+               title: 'La opción ingresada no es correcta',
+           })
             return this.puntaje = null;
          }
       }   
@@ -89,5 +93,9 @@ class Pelicula {
    agregarComoFavoritas(){
       return this.favoritas = true;
    }    
+
+   agregarComoRecomendadas(){
+      return this.recomendadas = true;
+   }
 }
  

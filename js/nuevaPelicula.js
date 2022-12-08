@@ -30,38 +30,38 @@ if (agregarBtn){
         genero = genero.toUpperCase();
     
         if (titulo == "" || director == "" || isNaN(año) || año > 2022 || genero == "" || isNaN(duracion)) {
-            alert("datos incorrectos");
+            Swal.fire({
+                icon: 'warning',
+                title: 'Datos incorrectos',
+            })
         }
         else {
             let nuevaPelicula =new Pelicula(titulo, director, año, genero, duracion);
             
-            //lo setteo?
             let miPelitecaGuardada = JSON.parse(localStorage.getItem("miPeliteca"));
-    
+           
+            if (vistasInput.checked) {
+                nuevaPelicula.agregarComoVista();
+            }
+            if (watchlistInput.checked) {
+                nuevaPelicula.agregarComoWatchlist();
+            }
+            if (favoritasInput.checked) {
+                nuevaPelicula.agregarComoFavoritas();
+            }
+            if (recomendadasInput.checked) {
+                nuevaPelicula.agregarComoRecomendadas();
+            }
+
             miPelitecaGuardada.push(nuevaPelicula);
             console.log("pelicula agregada", nuevaPelicula);
             console.log("mi peliteca", miPelitecaGuardada);
     
-            if (vistasInput.checked) {
-                miListaVistas.push(nuevaPelicula);
-                nuevaPelicula.agregarComoVista();
-                console.log("vistas", miListaVistas);
-            }
-            if (watchlistInput.checked) {
-                miListaWatchlist.push(nuevaPelicula);
-                nuevaPelicula.agregarComoWatchlist;
-                console.log("watchlist", miListaWatchlist);
-            }
-            if (favoritasInput.checked) {
-                miListaFavoritas.push(nuevaPelicula);
-                nuevaPelicula.agregarComoFavoritas();
-                console.log("favoritas", miListaFavoritas);
-            }
-            if (recomendadasInput.checked) {
-                miListaRecomendadas.push(nuevaPelicula);
-                console.log("recomendadas", miListaRecomendadas);
-            }
-    
+            Swal.fire({
+                icon: 'success',
+                title: 'Película cargada con éxito a mi Peliteca',
+            })
+
             localStorage.setItem("nuevaPelicula", JSON.stringify(nuevaPelicula));
             localStorage.setItem("miPeliteca", JSON.stringify(miPelitecaGuardada));
         }
