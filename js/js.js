@@ -31,12 +31,13 @@ buscarBtn.onclick = (e) => {
 
         let pelicula = document.createElement("p");
         pelicula.setAttribute("class" , "pPeliculas");
-        pelicula.innerHTML = `  <p><i>película encontrada:</i></p>
-                                <p>título: ${esta.titulo} / director/a: ${esta.director}</p>
-                                <p>año: ${esta.año} / género: ${esta.genero} / duración: ${esta.duracion} mins. / puntaje: ${esta.puntaje}</p>
-                                <p>vistas: ${esta.vistas}</p>
-                                <p>watchlist: ${esta.watchlist}</p>
-                                <p>favoritas: ${esta.favoritas}</p>
+        pelicula.innerHTML = `  <p><i>Película encontrada:</i></p>
+                                <p>Título: ${esta.titulo} / Director/a: ${esta.director}</p>
+                                <p>Año: ${esta.año} / Género: ${esta.genero} </p> 
+                                <p>Duración: ${esta.duracion} mins. / Puntaje: ${esta.puntaje}</p>
+                                <p>Vistas: ${esta.vistas}</p>
+                                <p>Watchlist: ${esta.watchlist}</p>
+                                <p>Favoritas: ${esta.favoritas}</p>
                                 
         `;
 

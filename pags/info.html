@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cargar película</title>
+  <title>Novedades</title>
 
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/cb92ffd13d.js" crossorigin="anonymous"></script>
@@ -60,7 +60,7 @@
           </ul>
 
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="buscar película" id="inputBuscarPeli" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="buscar película" aria-label="Search" id="inputBuscarPeli">
             <button class="btn btn-outline-success" type="submit" id="btnBuscarPeli">lupita</button>
           </form>
         </div>
@@ -71,76 +71,25 @@
 
     </div>
 
-    <!-- main -->
     <main>
-      <h2 class="mainH2">
-        Cargar película a mi Peliteca
-      </h2>
-
-      <div class="m-3 text-center" id="formAgregar">        
-        <form class="col-lg-8 m-auto row justify-content-center align-items-center" id="formFormulario">
-          <div class="form-group col-lg-6 cocontainer m-1 p-0">
-            <label for="titulo"></label>
-            <input type="text" class="form-control m-0 p-0" id="titulo" placeholder="Título">
-          </div>
-          <div class="col-lg-6 container m-1 p-0">
-            <label for="director"></label>
-            <input type="text" class="form-control m-0 p-0" id="director" placeholder="Director/a">
-          </div>
-          <div class="col-lg-6 container m-1 p-0">
-            <label for="año"></label>
-            <input type="text" class="form-control m-0 p-0" id="año" placeholder="Año">
-          </div>
-          <div class="col-lg-6 container m-1 p-0">
-            <label for="genero"></label>
-            <input type="text" class="form-control m-0 p-0" id="genero" placeholder="Género">
-          </div>
-          <div class="col-lg-6 container m-1 p-0">
-            <label for="duracion"></label>
-            <input type="text" class="form-control m-0 p-0" id="duracion" placeholder="Duración">
-          </div>
-
-          <div class="divPregunta" id="divVistas">
-            <p class="pCheckbox"> ¿viste esta película?</p>
-            <div class="form-check">
-              <input class="form-check-input btn-outline-success" type="checkbox" value="si" id="siVistas">
-              <label class="form-check-label" for="siVistas">sí</label>
-            </div>
-            <div class="col-lg-4 container m-0 p-0" id="divSiPuntaje">
-              <label for="puntaje"></label>
-              <input type="text" class="form-control m-0 p-0" id="puntaje" placeholder="¿Cuántas estrellas le das? (1 - 5)">
-            </div>
-          </div>
-
-          <div class="divPregunta">
-            <p class="pCheckbox"> ¿querés agregar esta película a tu lista watchlist?</p>
-            <div class="form-check">
-              <input class="form-check-input btn-outline-success" type="checkbox" value="si" id="siWatchlist">
-              <label class="form-check-label" for="siWatchlist">sí</label>
-            </div>
-          </div>
-
-          <div class="divPregunta">
-            <p class="pCheckbox"> ¿querés agregar esta película a tu lista favoritas?</p>
-            <div class="form-check">
-              <input class="form-check-input btn-outline-success" type="checkbox" value="si" id="siFavoritas">
-              <label class="form-check-label" for="siFavoritas">sí</label>
-            </div>
-          </div>
-          
-          <div class="divPregunta">
-            <p class="pCheckbox"> ¿querés agregar esta película a tu lista recomendadas?</p>
-            <div class="form-check">
-              <input class="form-check-input btn-outline-success" type="checkbox" value="si" id="siRecomendadas">
-              <label class="form-check-label" for="siRecomendadas">sí</label>
-            </div>
-          </div>
-
-          <div class="container">
-            <button type="submit" id="agregar" class="btn btn-outline-success">Agregar</button>
-          </div>
-        </form>
-      </div>
+      <h4 class="h4" id="h4Info"> Información destacada</h4>
+      <div class="divInfo">
+        <div class="divCadaPelicula" id="NOPE!">
+          <h5 class="h5">Nope!</h5>
+        </div>
+        <div class="divCadaPelicula" id="SMILE">
+          <h5 class="h5">Smile</h5>
+        </div>
+        <div class="divCadaPelicula" id="THE FRENCH DISPATCH">
+          <h5 class="h5">The French Dispatch</h5>
+        </div>
+        <div class="divCadaPelicula" id="CRIMES OF THE FUTURE">
+          <h5 class="h5">Crimes Of The Future</h5>
+        </div>
+        <div class="divCadaPelicula" id="LUCA">
+          <h5 class="h5">Luca</h5>
+        </div>
+      </div>      
     </main>
 
     <footer>
@@ -154,12 +103,9 @@
 
     <!-- sweetalert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    
     <!-- js -->
-    <script src="../js/classPelicula.js"></script>
-    <script src="../js/contenidoPeliteca.js"></script>
-    <script src="../js/nuevaPelicula.js"></script>
-    <script src="../js/js.js"></script>
+    <script src="../js/info.js"></script>
   </div>
 </body>
 </html>

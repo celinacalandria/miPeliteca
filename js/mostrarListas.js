@@ -12,12 +12,12 @@ function mostrarListaVistas(){
     listada.forEach(pelicula => {
         let itemPelicula = document.createElement("p");
         itemPelicula.setAttribute("class", "pItemPelicula");
-        itemPelicula.innerHTML =  ` <p>título: ${pelicula.titulo} / director/a: ${pelicula.director}</p>
-                                    <p>año: ${pelicula.año} / género: ${pelicula.genero} </p>
-                                    <p>duración: ${pelicula.duracion} mins / puntaje: ${pelicula.puntaje}</p>
-                                    <p>vistas: ${pelicula.vistas}</p>
-                                    <p>watchlist: ${pelicula.watchlist}</p>
-                                    <p>favoritas: ${pelicula.favoritas}</p>
+        itemPelicula.innerHTML =  ` <p>Título: ${pelicula.titulo} / Director/a: ${pelicula.director}</p>
+                                    <p>Año: ${pelicula.año} / Género: ${pelicula.genero} </p>
+                                    <p>Duración: ${pelicula.duracion} mins / Puntaje: ${pelicula.puntaje}</p>
+                                    <p>Vistas: ${pelicula.vistas}</p>
+                                    <p>Watchlist: ${pelicula.watchlist}</p>
+                                    <p>Favoritas: ${pelicula.favoritas}</p>
                                     
         `
         listaPelicula.appendChild(itemPelicula);
@@ -40,12 +40,12 @@ function mostrarListaWatchlitst(){
     listada.forEach(pelicula => {
         let itemPelicula = document.createElement("p");
         itemPelicula.setAttribute("class", "pItemPelicula");
-        itemPelicula.innerHTML =  ` <p>título: ${pelicula.titulo} / director/a: ${pelicula.director}</p>
-                                    <p>año: ${pelicula.año} / género: ${pelicula.genero} </p>
-                                    <p>duración: ${pelicula.duracion} mins / puntaje: ${pelicula.puntaje}</p>
-                                    <p>vistas: ${pelicula.vistas}</p>
-                                    <p>watchlist: ${pelicula.watchlist}</p>
-                                    <p>favoritas: ${pelicula.favoritas}</p>
+        itemPelicula.innerHTML =  ` <p>Título: ${pelicula.titulo} / Director/a: ${pelicula.director}</p>
+                                    <p>Año: ${pelicula.año} / Género: ${pelicula.genero} </p>
+                                    <p>Duración: ${pelicula.duracion} mins / Puntaje: ${pelicula.puntaje}</p>
+                                    <p>Vistas: ${pelicula.vistas}</p>
+                                    <p>Watchlist: ${pelicula.watchlist}</p>
+                                    <p>Favoritas: ${pelicula.favoritas}</p>
                                     
         `
         listaPelicula.appendChild(itemPelicula);
@@ -68,12 +68,12 @@ function mostrarListaFavoritas(){
     listada.forEach(pelicula => {
         let itemPelicula = document.createElement("p");
         itemPelicula.setAttribute("class", "pItemPelicula");
-        itemPelicula.innerHTML =  ` <p>título: ${pelicula.titulo} / director/a: ${pelicula.director}</p>
-                                    <p>año: ${pelicula.año} / género: ${pelicula.genero} </p>
-                                    <p>duración: ${pelicula.duracion} mins / puntaje: ${pelicula.puntaje}</p>
-                                    <p>vistas: ${pelicula.vistas}</p>
-                                    <p>watchlist: ${pelicula.watchlist}</p>
-                                    <p>favoritas: ${pelicula.favoritas}</p>
+        itemPelicula.innerHTML =  ` <p>Título: ${pelicula.titulo} / Director/a: ${pelicula.director}</p>
+                                    <p>Año: ${pelicula.año} / Género: ${pelicula.genero} </p>
+                                    <p>Duración: ${pelicula.duracion} mins / Puntaje: ${pelicula.puntaje}</p>
+                                    <p>Vistas: ${pelicula.vistas}</p>
+                                    <p>Watchlist: ${pelicula.watchlist}</p>
+                                    <p>Favoritas: ${pelicula.favoritas}</p>
                                     
         `
         listaPelicula.appendChild(itemPelicula);
@@ -84,4 +84,30 @@ function mostrarListaFavoritas(){
 }
 mostrarListaFavoritas();
 
+// RECOMENDADAS
+function mostrarListaRecomendadas(){
+    let fragmento = document.createDocumentFragment();
+    let listaPelicula = fragmento.appendChild(document.createElement("div"));
 
+    let miPelitecaGuardada = JSON.parse(localStorage.getItem("miPeliteca"));
+    
+    let listada = miPelitecaGuardada.filter(pelicula => pelicula.recomendadas);
+
+    listada.forEach(pelicula => {
+        let itemPelicula = document.createElement("p");
+        itemPelicula.setAttribute("class", "pItemPelicula");
+        itemPelicula.innerHTML =  ` <p>Título: ${pelicula.titulo} / Director/a: ${pelicula.director}</p>
+                                    <p>Año: ${pelicula.año} / Género: ${pelicula.genero} </p>
+                                    <p>Duración: ${pelicula.duracion} mins / Guntaje: ${pelicula.puntaje}</p>
+                                    <p>Vistas: ${pelicula.vistas}</p>
+                                    <p>Watchlist: ${pelicula.watchlist}</p>
+                                    <p>Favoritas: ${pelicula.favoritas}</p>
+                                    
+        `
+        listaPelicula.appendChild(itemPelicula);
+    });    
+
+    let divListaRecomendadas = document.getElementById("divListaRecomendadas");
+    divListaRecomendadas.append(fragmento);
+}
+mostrarListaRecomendadas();   

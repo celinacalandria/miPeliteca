@@ -1,15 +1,21 @@
 // NOVEDADES
 function mostrarListaNovedades(){
     let fragmento = document.createDocumentFragment();
-    let listaPelicula = fragmento.appendChild(document.createElement("ul"));
+    let listaPelicula = fragmento.appendChild(document.createElement("div"));
 
     novedades.forEach((pelicula) => {
         let itemPelicula = document.createElement("p");
         itemPelicula.setAttribute("class", "pItemPelicula");
-        itemPelicula.innerHTML =  `<p>título: ${pelicula.titulo} / director/a: ${pelicula.director}</p>
-                                    <p>año: ${pelicula.año} / género: ${pelicula.genero} </p>
-                                    <p>duración: ${pelicula.duracion} mins. 
+        itemPelicula.innerHTML =  `<p>Título: ${pelicula.titulo} / Director/a: ${pelicula.director}</p>
+                                    <p>Año: ${pelicula.año} / Género: ${pelicula.genero} </p>
+                                    <p>Duración: ${pelicula.duracion} mins. </p>
         `
+        let aPelicula = document.createElement("a");
+        aPelicula.setAttribute("class", "aPelicula");
+        aPelicula.setAttribute("href", `../pags/info.html#${pelicula.titulo}`) //no me lleva al id deseado
+        aPelicula.innerHTML = `<p> + info </p>`;
+        
+        itemPelicula.appendChild(aPelicula);
         listaPelicula.appendChild(itemPelicula);
     })
 
@@ -18,30 +24,3 @@ function mostrarListaNovedades(){
 }
 mostrarListaNovedades();
 
-// RECOMENDADAS
-function mostrarListaRecomendadas(){
-    let fragmento = document.createDocumentFragment();
-    let listaPelicula = fragmento.appendChild(document.createElement("div"));
-
-    let miPelitecaGuardada = JSON.parse(localStorage.getItem("miPeliteca"));
-    
-    let listada = miPelitecaGuardada.filter(pelicula => pelicula.recomendadas);
-
-    listada.forEach(pelicula => {
-        let itemPelicula = document.createElement("p");
-        itemPelicula.setAttribute("class", "pItemPelicula");
-        itemPelicula.innerHTML =  ` <p>título: ${pelicula.titulo} / director/a: ${pelicula.director}</p>
-                                    <p>año: ${pelicula.año} / género: ${pelicula.genero} </p>
-                                    <p>duración: ${pelicula.duracion} mins / puntaje: ${pelicula.puntaje}</p>
-                                    <p>vistas: ${pelicula.vistas}</p>
-                                    <p>watchlist: ${pelicula.watchlist}</p>
-                                    <p>favoritas: ${pelicula.favoritas}</p>
-                                    
-        `
-        listaPelicula.appendChild(itemPelicula);
-    });    
-
-    let divListaRecomendadas = document.getElementById("divListaRecomendadas");
-    divListaRecomendadas.append(fragmento);
-}
-mostrarListaRecomendadas();   

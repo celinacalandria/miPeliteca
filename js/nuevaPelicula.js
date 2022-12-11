@@ -12,6 +12,8 @@ let watchlistInput = document.getElementById("siWatchlist");
 let favoritasInput = document.getElementById("siFavoritas");
 let recomendadasInput = document.getElementById("siRecomendadas");
 
+let puntoInput = document.getElementById("puntaje");
+
 let formulario = document.getElementById("formFormulario");
 let agregarBtn = document.getElementById("agregar");
 
@@ -24,12 +26,13 @@ if (agregarBtn){
         let año = parseInt(añoInput.value);
         let genero = generoInput.value;
         let duracion = parseInt(duracionInput.value);
+        let estrellas = parseInt(puntoInput.value);
     
         titulo = titulo.toUpperCase();
         director = director.toUpperCase();
         genero = genero.toUpperCase();
     
-        if (titulo == "" || director == "" || isNaN(año) || año > 2022 || genero == "" || isNaN(duracion)) {
+        if (titulo == "" || director == "" || isNaN(año) || año > 2022 || genero == "" || isNaN(duracion) || estrellas <= 0 || estrellas > 5) {
             Swal.fire({
                 icon: 'warning',
                 title: 'Datos incorrectos',
@@ -39,9 +42,9 @@ if (agregarBtn){
             let nuevaPelicula =new Pelicula(titulo, director, año, genero, duracion);
             
             let miPelitecaGuardada = JSON.parse(localStorage.getItem("miPeliteca"));
-           
-            if (vistasInput.checked) {
-                nuevaPelicula.agregarComoVista();
+
+           if (vistasInput.checked){
+                nuevaPelicula.agregarComoVista(estrellas);
             }
             if (watchlistInput.checked) {
                 nuevaPelicula.agregarComoWatchlist();
@@ -77,6 +80,7 @@ function resetValores(){
     generoInput.value = "";
     duracionInput.value = "";
     vistasInput.checked = false;
+    puntoInput.value = "";
     watchlistInput.checked = false;
     favoritasInput.checked = false;
     recomendadasInput.checked = false;

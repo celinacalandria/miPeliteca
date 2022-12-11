@@ -33,36 +33,11 @@ if (miPeliteca == undefined){
 // NOVEDADES
 let novedades = [];
 
-novedades.push(new Pelicula("NOPE", "JORDAN PEELE", 2022, "THRILLER", 130));
+novedades.push(new Pelicula("NOPE!", "JORDAN PEELE", 2022, "THRILLER", 130));
 novedades.push(new Pelicula("SMILE", "PARKER FILM", 2022, "HORROR/MISTERY", 115));
 novedades.push(new Pelicula("THE FRENCH DISPATCH", "WES ANDERSON", 2021, "DRAMA/ROMANCE", 108));
 novedades.push(new Pelicula("CRIMES OF THE FUTURE", "DAVID CRONENBERG", 2022,"SCIENCE FICTION/HORROR", 107));
-novedades.push(new Pelicula("THE WORST PERSON IN THE WORLD", "JOACHIM TRIER", 2021, "COMEDY/DRAMA", 128));
-
- 
-// RECOMENDADAS
-/* let miListaRecomendadas = JSON.parse(localStorage.getItem("miListaRecomendadas"));
-if(miListaRecomendadas == undefined){
-    miListaRecomendadas = [];
-
-    miPeliteca.push(new Pelicula("APOCALYPTO", "MEL GIBSON", 2006, "ACTION/HISTORY", 139, true, false, false, true, 5));
-    miPeliteca.push(new Pelicula("THE SECRET IN THEIR EYES", "JUAN JOSE CAMPANELLA", 2009, "CRIME/MISTERY", 130, true, false, false, true, 5));
-    miPeliteca.push(new Pelicula("ADAPTATION", "SPIKE JONZE", 2002, "CRIME/DRAMA", 115, true, false, false, true, 4));
-    miPeliteca.push(new Pelicula("BUT I'M A CHEERLEADER", "JAMIE BABBIT",1999, "COMEDY/ROMANCE", 85, true, false, false, true, 4));
-    miPeliteca.push(new Pelicula("THE INTRUDER", "NATALIA META", 2020, "THRILLER", 95, true, false, true, true, 5));
-
-    localStorage.setItem("miListaRecomendadas", JSON.stringify(miListaRecomendadas));
-} */
-
-/* let miListaRecomendadas = [];
-
-miListaRecomendadas.push(new Pelicula("APOCALYPTO", "MEL GIBSON", 2006, "ACTION/HISTORY", 139, true, false, false, 5));
-miListaRecomendadas.push(new Pelicula("THE SECRET IN THEIR EYES", "JUAN JOSE CAMPANELLA", 2009, "CRIME/MISTERY", 130, true, false, false, 5));
-miListaRecomendadas.push(new Pelicula("ADAPTATION", "SPIKE JONZE", 2002, "CRIME/DRAMA", 115, true, false, false, 4));
-miListaRecomendadas.push(new Pelicula("BUT I'M A CHEERLEADER", "JAMIE BABBIT",1999, "COMEDY/ROMANCE", 85, true, false, false, 4));
-miListaRecomendadas.push(new Pelicula("THE INTRUDER", "NATALIA META", 2020, "THRILLER", 95, true, false, true, 5));
-
-localStorage.setItem("miListaRecomendadas", JSON.stringify(miListaRecomendadas)); */
+novedades.push(new Pelicula("LUCA", "ENRICO CASAROSA", 2021, "ANIMATION/FANTASY", 95));
 
 
 
